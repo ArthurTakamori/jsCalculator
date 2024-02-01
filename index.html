@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Online</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+            <div class="title">
+                <h1>Calculadora FIAP</h1>
+            </div>
+
+        <div class="main">    
+
+            <div class="main__form">
+                <div class="main__form__1">
+                    <label for="texto" >Valor 1</label>
+                    <input type="number" id="num1" placeholder=" Digite o primeiro valor">
+                </div>
+                <div class="main__form__2">
+                <label for="texto">Valor 2</label>  
+                <input type="number" id="num2" placeholder=" Digite o segundo valor">
+                </div>
+            </div>
+
+            <div class="container__operators">
+                <div class="operators">
+                    <button onclick="somar()">Somar</button>
+                    <button onclick="multiplicar()">Multiplicar</button>
+                    <button onclick="subtrair()">Subtrair</button>
+                    <button onclick="dividir()">Dividir</button>
+                </div>
+            </div>
+
+            <div class="container__results">
+                <div class="results">
+                    <p><span id="resultado"></span></p>
+                </div>
+            </div>    
+        </div> 
+
+        <script>
+            function somar(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                if (isNaN(num1) || isNaN(num2)){
+                    document.getElementById('resultado').innerHTML = "Dados em branco, favor digitar algo!"
+                }
+                else{
+                    var resultado = num1 + num2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+            }
+
+            function multiplicar(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                if (isNaN(num1) || isNaN(num2)){
+                    document.getElementById('resultado').innerHTML = "Dados em branco, favor digitar algo!"
+                }
+                else{
+                    var resultado = num1 * num2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+            }
+
+            function subtrair(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                if (isNaN(num1) || isNaN(num2)){
+                    document.getElementById('resultado').innerHTML = "Dados em branco, favor digitar algo!"
+                }
+                else{
+                    var resultado = num1 - num2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+            }
+
+            function dividir(){
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                if(num2==0){
+                    document.getElementById('resultado').innerHTML = "Não há divisão por zero."
+                }
+                else if(isNaN(num1) || isNaN(num2)){
+                    document.getElementById('resultado').innerHTML = "Dados em branco, favor digitar algo!"}
+                else{
+                    var resultado = num1 / num2;
+                    document.getElementById('resultado').innerHTML = resultado;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Handjet:wght@100;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #4386E6;
+    --secondary-color:#4353e683;
+    --detail-color:#6743E6;
+    --text-color:#43BAE6;
+    --text-color2:#4CC2ED;
+    --font-text: 'Handjet', sans-serif;
+}
+
+body{
+    background: rgb(110,235,228);
+    background: linear-gradient(0deg, rgba(110,235,228,1) 0%, rgba(103,67,230,1) 100%);
+    min-height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+.title h1 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    line-height: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.main {
+    width: 450px;
+    height: 350px;
+    position: relative;
+    border-radius: 2rem;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    border-color: var(--text-color2);
+    border-style:double;
+}
+
+.main__form{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.main__form input:hover{
+    background-color: #6643e670;
+}
+
+.main__form label {
+    top: 15px;
+    padding: 4.5rem;
+    font-weight: 400;
+    text-wrap: nowrap;
+    font-family: var(--font-text);
+    font-size: 25px;
+    color: var(--text-color2);
+}
+
+.main__form input {
+    background: rgba(102, 67, 230, 0.57);
+    display: flex;
+    height: 3rem;
+    border-radius: 10px 5px 10px 5px;
+    border-color: var(--detail-color);
+    margin: .5rem .5rem .5rem 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+
+.main__form input::placeholder {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 0.547);
+    font-weight: 700;
+}
+
+
+.container__operators {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.operators {
+    padding: 0 7rem 0 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .25rem;
+}
+
+.operators button{
+    background-color: var(--detail-color);
+    font-family: var(--font-text);
+    font-size: large;
+    color: var(--text-color);
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.operators button:hover{
+    background-color: #6643e686;
+    font-weight: 700;
+}
+
+.operators button:first-child{
+    border-radius: 1rem 0 1rem 0;
+}
+
+.operators button:nth-child(2){
+    border-radius: 0 1rem 0 1rem;
+}
+
+.operators button:nth-child(3){
+    border-radius: 0 1rem 0 1rem;
+}
+
+.operators button:nth-child(4){
+    border-radius: 1rem 0 1rem 0;
+}
+
+.container__results{
+    background-color: var(--text-color2);
+    border-style: dashed;
+    border-color: var(--detail-color);
+    padding: 1rem;
+    width: 85%;
+    height: 30%;
+    display: flex;
+    margin: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.results p{
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: white;
+    text-transform: uppercase;
+}
